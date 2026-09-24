@@ -25,9 +25,4 @@ También se utilizaron diferentes widgets de Flutter para organizar y mejorar la
 - Padding.
 - SizedBox.
 
-## Ejecución del proyecto
 
-Clonar el repositorio:
-
-```bash
-git clone URL_DEL_REPOSITORIO
