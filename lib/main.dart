@@ -70,9 +70,9 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // NOMBRE DEL ESTUDIANTE
+  
               const Text(
-                'Yulieth Trujillo',
+                'Yulieth Yahaira Trujillo Rivera',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 24,
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                         const SizedBox(height: 10),
 
                         Image.network(
-                          'https://docs.flutter.dev/assets/images/shared/brand/flutter/logo/flutter-lockup.png',
+                          'https://tse1.mm.bing.net/th/id/OIP._hpQbfHcPyZilPFxrbRfzQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
                           height: 100,
                           fit: BoxFit.contain,
                         ),
