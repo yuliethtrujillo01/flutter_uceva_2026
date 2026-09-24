@@ -1,17 +1,33 @@
-# taller1_flutter
+# Taller 1 - Flutter
 
-A new Flutter project.
+## Descripción
 
-## Getting Started
+Este proyecto corresponde al Taller 1 de Flutter y tiene como objetivo implementar una pantalla básica utilizando StatefulWidget y demostrar el funcionamiento de setState().
 
-This project is a starting point for a Flutter application.
+La aplicación permite modificar dinámicamente el título del AppBar y mostrar un SnackBar como confirmación del cambio.
 
-A few resources to get you started if this is your first Flutter project:
+También se utilizaron diferentes widgets de Flutter para organizar y mejorar la interfaz gráfica.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Funcionalidades
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- StatefulWidget.
+- setState().
+- AppBar dinámico.
+- Image.network().
+- Image.asset().
+- ElevatedButton.
+- ElevatedButton.icon.
+- Container.
+- ListView.
+- SnackBar.
+- Column.
+- Row.
+- Padding.
+- SizedBox.
+
+## Ejecución del proyecto
+
+Clonar el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
