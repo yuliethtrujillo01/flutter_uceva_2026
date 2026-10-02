@@ -1,17 +1,31 @@
-# taller1_flutter
+# Taller 2 - Procesos en Segundo Plano con Flutter
 
-A new Flutter project.
+## Descripción
 
-## Getting Started
+Este proyecto corresponde al segundo taller de Flutter y tiene como objetivo demostrar el manejo de procesos asíncronos y tareas en segundo plano mediante el uso de:
 
-This project is a starting point for a Flutter application.
+- `Future`
+- `async` / `await`
+- `Timer`
+- `Isolate`
 
-A few resources to get you started if this is your first Flutter project:
+La aplicación permite visualizar de forma práctica cómo ejecutar tareas sin bloquear la interfaz de usuario, controlar un cronómetro y realizar un proceso pesado utilizando un Isolate.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Objetivo
+
+Desarrollar una aplicación Flutter que implemente diferentes mecanismos para el manejo de tareas asíncronas y procesos en segundo plano, garantizando que la interfaz continúe respondiendo correctamente durante la ejecución de dichas tareas.
+
+---
+
+## Funcionalidades implementadas
+
+La aplicación cuenta con un menú principal desde el cual se puede acceder a tres módulos:
+
+### 1. Future / async / await
+
+En este módulo se simula una consulta de datos mediante:
+
+```dart
+Future.delayed()
