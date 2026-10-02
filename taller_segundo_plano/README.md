@@ -246,39 +246,6 @@ En este taller se realiza una suma de una gran cantidad de números como ejemplo
 
 ---
 
-# Diferencia entre Future e Isolate
-
-Aunque `Future` e `Isolate` permiten trabajar con tareas que no deberían afectar la experiencia del usuario, tienen propósitos diferentes.
-
-## Future
-
-`Future` se utiliza principalmente para operaciones que requieren esperar un resultado.
-
-Ejemplos:
-
-- Consultas de red.
-- Lectura de información.
-- Acceso a bases de datos.
-- Espera de servicios externos.
-
-Un `Future` no significa necesariamente que la operación se esté ejecutando en otro Isolate.
-
----
-
-## Isolate
-
-`Isolate` se utiliza principalmente para tareas que requieren procesamiento intensivo de CPU.
-
-Ejemplos:
-
-- Cálculos matemáticos grandes.
-- Procesamiento masivo de datos.
-- Transformaciones complejas.
-- Procesos que podrían bloquear la interfaz.
-
-El Isolate permite ejecutar estas tareas en un espacio de ejecución separado.
-
----
 
 # Pantallas de la aplicación
 
