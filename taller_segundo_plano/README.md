@@ -532,27 +532,7 @@ lib/main.dart
 
 ---
 
-# Ejecución del proyecto
 
-Para ejecutar el proyecto se debe ingresar a la carpeta:
-
-```bash
-cd taller_segundo_plano
-```
-
-Luego descargar las dependencias:
-
-```bash
-flutter pub get
-```
-
-Finalmente ejecutar:
-
-```bash
-flutter run
-```
-
----
 
 # GitFlow utilizado
 
@@ -591,59 +571,6 @@ hacia:
 ```text
 main
 ```
-
----
-
-# Repositorio
-
-Repositorio del proyecto:
-
-```text
-https://github.com/yuliethtrujillo01/flutter_uceva_2026
-```
-
-Carpeta correspondiente al segundo taller:
-
-```text
-taller_segundo_plano
-```
-
----
-
-# Evidencias sugeridas
-
-Para documentar el funcionamiento del proyecto se pueden incluir las siguientes evidencias.
-
-## Future / async / await
-
-- Pantalla antes de iniciar la consulta.
-- Estado Loading.
-- Estado de éxito.
-- Estado de error.
-- Mensajes mostrados en consola.
-
-## Timer
-
-- Cronómetro en estado inicial.
-- Cronómetro iniciado.
-- Cronómetro pausado.
-- Cronómetro reanudado.
-- Cronómetro reiniciado.
-
-## Isolate
-
-- Pantalla antes de ejecutar el proceso.
-- Estado de procesamiento.
-- Resultado final.
-- Tiempo de ejecución.
-- Mensajes mostrados en consola.
-
-## Git
-
-- Rama `feature/taller_segundo_plano`.
-- Commit realizado.
-- Pull Request hacia `dev`.
-- Pull Request de `dev` hacia `main`.
 
 ---
 
