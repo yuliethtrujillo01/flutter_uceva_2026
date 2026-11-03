@@ -694,4 +694,414 @@ La implementación de estas herramientas permite crear aplicaciones más fluidas
 
 Taller desarrollado como parte de las actividades académicas de Flutter.
 
+# Taller 3 - Firebase App Distribution
+
+## Descripción
+
+Este proyecto corresponde al taller de **distribución y prueba de aplicaciones Flutter mediante Firebase App Distribution**.
+
+El objetivo principal fue generar un APK en modo `release`, publicarlo mediante Firebase App Distribution, asignarlo a un grupo de pruebas, instalarlo en un dispositivo Android y posteriormente realizar una actualización incremental de la aplicación.
+
+Para este taller se creó una nueva aplicación dentro del mismo repositorio denominada:
+
+```text
+app_distribution
+```
+
+De esta manera se mantuvieron separados los proyectos correspondientes a los talleres anteriores.
+
+---
+
+## Objetivo
+
+Distribuir y probar un APK generado desde Flutter utilizando **Firebase App Distribution**, aplicando un flujo completo de publicación y actualización:
+
+```text
+Generar APK
+    ↓
+Firebase App Distribution
+    ↓
+Testers
+    ↓
+Instalación
+    ↓
+Pruebas
+    ↓
+Actualización
+```
+
+---
+
+## Aplicación creada
+
+La aplicación utilizada para el ejercicio fue:
+
+```text
+app_distribution
+```
+
+Identificador Android:
+
+```text
+com.example.app_distribution
+```
+
+La aplicación se encuentra dentro de la estructura general del repositorio:
+
+```text
+flutter_uceva_2026/
+│
+├── taller1_flutter/
+│
+├── taller_segundo_plano/
+│
+├── app_distribution/
+│   ├── android/
+│   ├── ios/
+│   ├── lib/
+│   │   └── main.dart
+│   ├── linux/
+│   ├── macos/
+│   ├── test/
+│   ├── web/
+│   ├── windows/
+│   └── pubspec.yaml
+│
+└── app_distribution_entrega.txt
+```
+
+---
+
+## Preparación del APK
+
+Para generar la aplicación en modo `release` se utilizó:
+
+```bash
+flutter build apk
+```
+
+El APK generado se encuentra en:
+
+```text
+app_distribution/build/app/outputs/flutter-apk/app-release.apk
+```
+
+Este archivo fue utilizado posteriormente para realizar la distribución mediante Firebase App Distribution.
+
+---
+
+## Configuración de Android
+
+El identificador de la aplicación se configuró en:
+
+```text
+android/app/build.gradle.kts
+```
+
+con el siguiente valor:
+
+```kotlin
+applicationId = "com.example.app_distribution"
+```
+
+También se verificó el permiso de acceso a Internet en:
+
+```text
+android/app/src/main/AndroidManifest.xml
+```
+
+mediante:
+
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+---
+
+## Versionado
+
+Para la primera distribución se utilizó:
+
+```yaml
+version: 1.0.0+1
+```
+
+Esto corresponde a:
+
+```text
+versionName = 1.0.0
+versionCode = 1
+```
+
+Posteriormente se realizó una actualización incremental:
+
+```yaml
+version: 1.0.1+2
+```
+
+correspondiente a:
+
+```text
+versionName = 1.0.1
+versionCode = 2
+```
+
+El incremento del `versionCode` permitió que Android reconociera la segunda compilación como una actualización de la aplicación previamente instalada.
+
+---
+
+# Firebase App Distribution
+
+Se creó y configuró un proyecto en Firebase utilizando el identificador Android:
+
+```text
+com.example.app_distribution
+```
+
+Posteriormente se ingresó a:
+
+```text
+Firebase Console
+        ↓
+App Distribution
+```
+
+para gestionar las versiones y testers.
+
+---
+
+## Grupo de pruebas
+
+Se creó el grupo:
+
+```text
+QA_Clase
+```
+
+y se agregó como tester:
+
+```text
+dduran@uceva.edu.co
+```
+
+Firebase App Distribution permitió enviar la invitación al tester y realizar seguimiento al proceso de aceptación y descarga.
+
+---
+
+## Primera versión distribuida
+
+La primera versión publicada fue:
+
+```text
+1.0.0+1
+```
+
+### Release Notes
+
+```text
+Versión 1.0.0
+
+Primera versión de prueba de la aplicación Flutter distribuida mediante Firebase App Distribution.
+
+Cambios:
+- Generación inicial del APK en modo release.
+- Configuración de Firebase App Distribution.
+- Creación del grupo QA_Clase.
+- Registro del tester.
+- Validación de instalación y ejecución de la aplicación.
+```
+
+---
+
+## Prueba de instalación
+
+Después de publicar la primera versión se realizó el siguiente proceso:
+
+```text
+Publicar APK
+    ↓
+Enviar invitación
+    ↓
+Aceptar invitación
+    ↓
+Descargar aplicación
+    ↓
+Instalar en Android
+    ↓
+Ejecutar aplicación
+```
+
+La aplicación fue instalada y ejecutada correctamente en un dispositivo Android.
+
+---
+
+## Actualización incremental
+
+Posteriormente se actualizó la aplicación desde:
+
+```text
+1.0.0+1
+```
+
+hacia:
+
+```text
+1.0.1+2
+```
+
+Luego se volvió a generar el APK:
+
+```bash
+flutter build apk
+```
+
+y se realizó una nueva distribución mediante Firebase App Distribution.
+
+---
+
+## Segunda versión distribuida
+
+La versión actualizada fue:
+
+```text
+1.0.1+2
+```
+
+### Release Notes
+
+```text
+Versión 1.0.1
+
+Actualización incremental de la aplicación Flutter distribuida mediante Firebase App Distribution.
+
+Cambios:
+- Incremento de versionName de 1.0.0 a 1.0.1.
+- Incremento de versionCode de 1 a 2.
+- Generación de un nuevo APK en modo release.
+- Redistribución mediante Firebase App Distribution.
+- Validación del flujo de actualización.
+```
+
+---
+
+# Bitácora de QA
+
+| Versión | Fecha | Cambios | Incidencias | Estado |
+|---|---|---|---|---|
+| 1.0.0+1 | 2 de noviembre de 2026 | Generación inicial del APK, configuración en Firebase, creación del grupo QA_Clase y distribución inicial | No se presentaron incidencias críticas | Aprobado |
+| 1.0.1+2 | 2 de noviembre de 2026 | Actualización de versión, generación de nuevo APK y redistribución | No se identificaron errores críticos | Aprobado |
+
+---
+
+# Flujo completo del taller
+
+```text
+Crear app_distribution
+        ↓
+Configurar versión 1.0.0+1
+        ↓
+Verificar applicationId
+        ↓
+Verificar permisos Android
+        ↓
+flutter build apk
+        ↓
+Obtener app-release.apk
+        ↓
+Registrar aplicación en Firebase
+        ↓
+Configurar App Distribution
+        ↓
+Crear grupo QA_Clase
+        ↓
+Agregar tester
+        ↓
+Publicar versión 1.0.0
+        ↓
+Aceptar invitación
+        ↓
+Instalar y probar
+        ↓
+Cambiar a versión 1.0.1+2
+        ↓
+Generar nuevo APK
+        ↓
+Redistribuir
+        ↓
+Validar actualización
+```
+
+---
+
+# GitFlow utilizado
+
+Para el desarrollo del taller se utilizó la rama:
+
+```text
+feature/app_distribution
+```
+
+El flujo aplicado fue:
+
+```text
+feature/app_distribution
+          |
+          v
+         dev
+          |
+          v
+         main
+```
+
+El desarrollo se realizó inicialmente en la rama:
+
+```text
+feature/app_distribution
+```
+
+Posteriormente se realizó un Pull Request hacia:
+
+```text
+dev
+```
+
+Finalmente, los cambios fueron integrados desde:
+
+```text
+dev
+```
+
+hacia:
+
+```text
+main
+```
+
+
+
+---
+
+# Tecnologías utilizadas
+
+- Flutter
+- Dart
+- Android
+- Firebase
+- Firebase App Distribution
+- Git
+- GitHub
+- PowerShell
+
+---
+
+# Conclusión
+
+El desarrollo de este taller permitió comprender el proceso de distribución controlada de una aplicación Flutter utilizando Firebase App Distribution.
+
+Se logró generar un APK en modo `release`, configurar un grupo de testers, distribuir una primera versión, instalar y ejecutar la aplicación en un dispositivo Android y realizar posteriormente una actualización incremental.
+
+La implementación del versionado mediante `versionName` y `versionCode` permitió validar correctamente el proceso de actualización desde la versión `1.0.0+1` hacia `1.0.1+2`.
+
+Adicionalmente, se aplicó el flujo de trabajo con Git y GitHub mediante las ramas `feature/app_distribution`, `dev` y `main`, manteniendo organizados e independientes los diferentes talleres desarrollados durante la asignatura.
+
 
