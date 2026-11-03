@@ -1,0 +1,42 @@
+TALLER FIREBASE APP DISTRIBUTION
+
+Repositorio:
+https://github.com/yuliethtrujillo01/flutter_uceva_2026
+
+Aplicación:
+app_distribution
+
+Grupo de pruebas:
+QA_Clase
+
+Tester:
+dduran@uceva.edu.co
+
+VERSIÓN INICIAL
+Versión: 1.0.0+1
+
+Release Notes:
+Primera versión de prueba de la aplicación Flutter distribuida mediante Firebase App Distribution.
+
+Cambios:
+- Generación inicial del APK en modo release.
+- Configuración de Firebase App Distribution.
+- Creación del grupo QA_Clase.
+- Asignación de tester.
+- Validación de instalación y ejecución.
+
+VERSIÓN DE ACTUALIZACIÓN
+Versión: 1.0.1+2
+
+Release Notes:
+Actualización incremental de la aplicación Flutter distribuida mediante Firebase App Distribution.
+
+Cambios:
+- Incremento de versionName de 1.0.0 a 1.0.1.
+- Incremento de versionCode de 1 a 2.
+- Generación de nuevo APK.
+- Redistribución mediante Firebase App Distribution.
+- Validación del flujo de actualización.
+
+ENLACE DE INSTALACIÓN:
+PEGAR AQUÍ EL ENLACE GENERADO POR FIREBASE APP DISTRIBUTION
